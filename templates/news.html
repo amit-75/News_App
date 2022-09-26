@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>India News -App</title>
+    </head>
+    <body class="container">
+        <a href="/india">India</a>
+        <a href="/america">America</a>
+
+        <center><h1 style="margin-top: 50px;" > News App </h1></center>
+        {% for i in articles %}
+            <h3>Author : {{i.author}} </h3>
+            <h3>Title : {{i.title}}</h3>
+            <h3>published : {{i.publishedAt}}
+            <h3>Url : <a href="{{i.url}}">{{i.url}}></a></h3>
+            <h3> Discription : </h3> <p>{{i.description}}</p>
+            <img src="{{i.urlToImage}}" width="800" height="300"><br><br>
+
+        {%endfor%}
+
+    </body>
+</html>
